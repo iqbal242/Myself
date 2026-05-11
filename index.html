@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Iqbal Hossain - Digital Business Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: #0b1120;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --accent-gold: #fbbf24;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        
+        body { 
+            background: var(--primary-bg);
+            background-image: radial-gradient(circle at top right, #1e293b, #0b1120);
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            padding: 20px;
+        }
+        
+        .card-container {
+            width: 100%;
+            max-width: 380px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            padding: 50px 25px 40px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            padding: 5px;
+            background: rgba(251, 191, 36, 0.05);
+            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.15);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: #007bff;
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border: 3px solid #0f172a;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h1 { color: var(--text-main); font-size: 28px; margin-bottom: 6px; font-weight: 700; letter-spacing: 0.5px; }
+        .title { color: var(--accent-gold); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 15px; }
+        
+        .brand-badge {
+            background: rgba(255, 255, 255, 0.06);
+            color: #cbd5e1;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            margin-bottom: 35px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-list { display: grid; gap: 14px; margin-bottom: 35px; }
+        
+        .btn {
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 16px;
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn:hover {
+            background: var(--accent-gold);
+            color: #000;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(251, 191, 36, 0.25);
+        }
+
+        .btn i { font-size: 19px; }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .social-icon {
+            color: var(--text-dim);
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover { color: var(--accent-gold); transform: scale(1.25); }
+
+        .footer { margin-top: 30px; font-size: 11px; color: var(--text-dim); opacity: 0.5; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="profile-wrapper">
+        <img src="https://i.ibb.co/C5Vf4xG/iqbal-sir.jpg" alt="MD Iqbal Hossain" class="profile-img" onerror="this.src='https://via.placeholder.com/140/222/fbbf24?text=Iqbal+Sir'">
+        <div class="verified-badge"><i class="fas fa-check"></i></div>
+    </div>
+
+    <h1>MD Iqbal Hossain</h1>
+    <div class="title">IT & Security Expert</div>
+    <div class="brand-badge"><i class="fas fa-apple-alt"></i> Apple Online Bangladesh</div>
+
+    <div class="btn-list">
+        <a href="tel:+966561149765" class="btn">
+            <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+        <a href="https://wa.me/966561149765" class="btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp Me
+        </a>
+        <a href="mailto:mdiqbalhosen795@gmail.com" class="btn">
+            <i class="fas fa-envelope"></i> Send Email
+        </a>
+    </div>
+
+    <div class="social-row">
+        <a href="https://www.facebook.com/share/1c1wk2PCZg/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <p class="footer">Premium Connection | Powered by Apple Online</p>
+</div>
+
+</body>
+</html>
